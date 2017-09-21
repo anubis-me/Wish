@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Talent Hunt">
+    <meta name="author" content="Fun">
+
+    <!-- Main Angular Files -->
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/angular-animate.js"></script>
+
+    <!-- Angular Config/Routes -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!-- Angular Controllers -->
+     <script src="app/controllers/wishingCtrl.js"></script>
+    <!--      <script src="app/controllers/loginCtrl.js"></script>
+     <!-- <script src="app/controllers/emailCtrl.js"></script>
+          <script src="app/controllers/managementCtrl.js"></script>
+
+      <!-- Angular Services -->
+    <script src="app/services/wishingS
+
+
+    ervices.js"></script>
+    <!-- <script src="app/services/loginservices.js"></script>
+
+     <!-- Cascade Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+    <title>Wishes</title>
+</head>
+
+<body ng-app="wishApp">
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Wishes</a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Create Wish</a></li>
+                <li><a href="#">No of views</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        More <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" >About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Connect</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Help</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+           <!-- for showing wisher name -->
+           <!-- <a href="/profile" ng-show="!getin.isloggedin"> <p class="navbar-text navbar-right">{{getin.username}}</p></a>
+           -->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- container-fluid -->
+</nav>
+
+
+<!-- Showing differnt canvas -->
+<div class="container">
+    <div ng-view ></div>
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+</body>
+
+</html>

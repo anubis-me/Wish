@@ -1,0 +1,27 @@
+{
+  "name": "wishes",
+  "version": "1.0.0",
+  "description": "an application that helps you to create your own wish",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "wish"
+  },
+  "keywords": [
+    "wishes",
+    "application"
+  ],
+  "author": "Abhinav Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12",
+    "mongoose-title-case": "0.0.4",
+    "morgan": "^1.8.2"
+  }
+}

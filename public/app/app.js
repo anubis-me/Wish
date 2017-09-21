@@ -1,1 +1,1 @@
-angular.module('wishApp',['ngRoute'])
+angular.module('wishApp',['ngRoute','wishService','wishController'])

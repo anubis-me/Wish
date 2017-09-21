@@ -17,8 +17,8 @@ var app = angular.module('wishRoute',['ngRoute'])
                 templateUrl :'app/views/pages/wishing/views.html'
             })
             //shows the generated wish open from url
-            .when('/wishno',{
-                templateUrl: 'app/views/pages/wishing/wishno.html'
+            .when('/share',{
+                templateUrl: 'app/views/pages/wishing/share.html'
             })
             //shows differnt type of wish sample
             .when('/type1',{
@@ -30,6 +30,9 @@ var app = angular.module('wishRoute',['ngRoute'])
             .when('/type3',{
                 templateUrl :'app/views/pages/type/type3.html'
              })
+            .when('/type4',{
+                templateUrl :'app/views/pages/type/type4.html'
+            })
 
             .otherwise({ redirectTo: '/' });      // If user tries to access any other route, redirect to home page
 

@@ -4,7 +4,7 @@ module.exports = function (router) {
 
     router.post('/wisher', function(req,res) {
         var wishing = new wish();
-        wishing.messages = reg.body.messages;
+        wishing.messages = req.body.messages;
         wishing.choice   = req.body.choice;
         wishing.counter  = req.body.counter;
         wishing.views    = req.body.views;

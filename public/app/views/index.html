@@ -20,9 +20,8 @@
 
     <!-- Angular Controllers -->
      <script src="app/controllers/wishingCtrl.js"></script>
-    <!--      <script src="app/controllers/loginCtrl.js"></script>
-     <!-- <script src="app/controllers/emailCtrl.js"></script>
-          <script src="app/controllers/managementCtrl.js"></script>
+    <!-- <script src="app/controllers/loginCtrl.js"></script>
+    <!-- <script src="app/controllers/emailCtrl.js"></script>
 
       <!-- Angular Services -->
     <script src="app/services/wishingServices.js"></script>
@@ -56,8 +55,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Create Wish</a></li>
-                <li><a href="#">No of views</a></li>
+                <li><a href="/createwish">Create Wish</a></li>
+                <li><a href="/views">No of views</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         More <span class="caret"></span></a>
@@ -74,38 +73,15 @@
             </ul>
 
            <!-- for showing wisher name -->
-           <!-- <a href="/profile" ng-show="!getin.isloggedin"> <p class="navbar-text navbar-right">{{getin.username}}</p></a>
-           -->
+           <!-- <a href="/profile" ng-show="!getin.isloggedin"> <p class="navbar-text navbar-right">{{getin.username}}</p></a> -->
         </div><!-- /.navbar-collapse -->
     </div><!-- container-fluid -->
 </nav>
-
-
-<!-- Showing differnt canvas -->
 <div class="container">
-    <form id="login-form" ng-submit="register.regwish(regdata);" role="form" style="display: block;">
-        <div class="form-group">
-            <input type="text" name="messages" id="messages" tabindex="1" class="form-control" placeholder="Message" ng-model="register.regdata.messages">
-        </div>
-        <div class="form-group">
-            <input type="text" name="views" id="views" tabindex="1" class="form-control" placeholder="views" ng-model="register.regdata.views">
-        </div>
-        <div class="form-group">
-            <input type="text" name="counter" id="counter" tabindex="1" class="form-control" placeholder="counter" ng-model="register.regdata.counter">
-        </div>
-        <div class="form-group">
-            <input type="text" name="choice" id="choice" tabindex="1" class="form-control" placeholder="choice" ng-model="register.regdata.choice">
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                </div>
-            </div>
-        </div>
-    </form>
     <div ng-view ></div>
 </div>
+
+
 
 
 <!-- Placed at the end of the document so the pages load faster -->

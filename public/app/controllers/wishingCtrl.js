@@ -8,7 +8,6 @@ angular.module('wishController',['wishService'])
     this.regwish = function (regdata) {
         wishing.create(app.regdata).then(function (data) {
             if (data.data.success) {
-                console.log(data.data.message);
                 app.successmsg = data.data.message + "You can share your post now";
                 $timeout(function () {
                     $location.path('/share');

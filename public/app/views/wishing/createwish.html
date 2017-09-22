@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<!-- Showing differnt canvas -->
+<div class="container">
+    <form id="login-form" ng-submit="register.regwish(regdata);" role="form" style="display: block;">
+        <div class="form-group">
+            <input type="text" name="messages" id="messages" tabindex="1" class="form-control" placeholder="Message" ng-model="register.regdata.messages">
+        </div>
+        <div class="form-group">
+            <input type="text" name="views" id="views" tabindex="1" class="form-control" placeholder="views" ng-model="register.regdata.views">
+        </div>
+        <div class="form-group">
+            <input type="text" name="counter" id="counter" tabindex="1" class="form-control" placeholder="counter" ng-model="register.regdata.counter">
+        </div>
+        <div class="form-group">
+            <input type="text" name="choice" id="choice" tabindex="1" class="form-control" placeholder="choice" ng-model="register.regdata.choice">
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <h1>{{register.successmsg}}</h1>
+</div>

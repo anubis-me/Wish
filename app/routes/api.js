@@ -3,7 +3,7 @@ var wish = require('../models/wisher'); // Import User Model
 module.exports = function (router) {
 
     router.post('/wisher', function(req,res) {
-        var wishing = new wish();
+        var wishing      = new wish();
         wishing.messages = req.body.messages;
         wishing.choice   = req.body.choice;
         wishing.counter  = req.body.counter;
@@ -25,5 +25,29 @@ module.exports = function (router) {
             });
         }
     });
+    router.put('/inc_views', function (req,res) {
+        wish.findOne({counter: req.body.counter}).select('counter views').exec(function (err,wishing) {
+           if(err){
+               res.json({success:false,message:err});
+           }
+           else{
+               if(req.body.views === '' || req.body.views === null){
+                   res.json({success:false, message:"Number of previous views were not provided"});
+               }
+               else{
+                   wishing.views = req.body.views;
+                   wishing.save(function (err) {
+                       if(err){
+                           res.json({success:false, message:err});
+                       }
+                       else{
+                           res.json(success:true, menubar)
+                       }
+                   });
+               }
+           }
+        });
+    });
+
     return router; // Return the router object to the server
 };

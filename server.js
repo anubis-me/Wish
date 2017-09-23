@@ -8,6 +8,7 @@ var router      = express.Router();         // Invoke the Express Router
 var appRoutes   = require('./app/routes/api')(router); // Import the application end points/API
 var path        = require('path'); // Import path module
 
+
 app.use(morgan('dev'));             // Morgan Middleware
 app.use(bodyParser.json());         // Body-parser middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded

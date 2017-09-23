@@ -8,8 +8,8 @@ var titlize  = require('mongoose-title-case'); // Import Mongoose Title Case Plu
 var WishSchema = new Schema({
     messages   : { type: String, required: true },
     choice     : { type: String, required: true },
-    counter    : { type: String},
-    views      : { type: String}
+    counter    : { type: String, required: true },
+    views      : { type: String, required: true}
 });
 
 // Mongoose Plugin to change fields to title case after saved to database (ensures consistency)

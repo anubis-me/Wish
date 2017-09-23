@@ -25,29 +25,49 @@ module.exports = function (router) {
             });
         }
     });
+    //input counter onl
     router.put('/inc_views', function (req,res) {
-        wish.findOne({counter: req.body.counter}).select('counter views').exec(function (err,wishing) {
+        wish.findOne({counter: req.body.counter}).select('counter views choice messages').exec(function (err,wishing) {
            if(err){
                res.json({success:false,message:err});
            }
            else{
-               if(req.body.views === '' || req.body.views === null){
-                   res.json({success:false, message:"Number of previous views were not provided"});
+               if(req.body.counter === '' || req.body.counter === null){
+                   res.json({success:false, message:"Counter Id was not provided"});
                }
                else{
-                   wishing.views = req.body.views;
+                   wishing.views = req.body.views ;
                    wishing.save(function (err) {
                        if(err){
                            res.json({success:false, message:err});
                        }
                        else{
-                           res.json(success:true, menubar)
+                           res.json({success:true, message:"No of views updated" });
                        }
                    });
                }
            }
         });
     });
+    //For getting message
+    router.get('/message',function (req,res) {
+       wish.findOne({counter:req.body.counter}).select('counter messages choice views').exec(function (err,wishing) {
+         if(err){
+             res.json({success:false, message:err});
+         }
+         else {
+             if (req.body.counter === '' || req.body.counter === null) {
+                 res.json({success: false, message: "Counter Id was not provided"});
+             }
+             else {
+                     res.json({success: true, messages:wishing.messages, views:wishing.views, choice:wishing.choice });
+                  }
+             }
+
+       });
+    });
+
+
 
     return router; // Return the router object to the server
 };

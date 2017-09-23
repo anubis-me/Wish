@@ -10,7 +10,7 @@ var app = angular.module('wishRoute',['ngRoute'])
             })
             //adds Create page in index page
             .when('/createwish',{
-                templateUrl  : 'app/views/pages/wishing/createwish.html'
+                templateUrl:'app/views/wishing/createwish.html'
             })
             //adds No of views of you wish
             .when('/views',{
@@ -22,7 +22,7 @@ var app = angular.module('wishRoute',['ngRoute'])
             })
             //shows differnt type of wish sample
             .when('/type1',{
-                templateUrl :'app/views/type/firework.html'
+                templateUrl :'app/views/type/fire1.html'
             })
             .when('/type2',{
                 templateUrl :'app/views/type/type2.html'

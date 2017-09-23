@@ -20,4 +20,4 @@ function garland() {
 
 setInterval(function() {
   garland()
-}, 600)
+}, 500)

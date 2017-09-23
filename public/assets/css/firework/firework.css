@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic,900);
+body {
+  background-color: #000000;
+  margin: 0px;
+  overflow: hidden;
+  color: white;
+}
+
+body {
+  position: relative;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3em;
+}

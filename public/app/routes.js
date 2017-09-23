@@ -22,7 +22,7 @@ var app = angular.module('wishRoute',['ngRoute'])
             })
             //shows differnt type of wish sample
             .when('/type1',{
-                templateUrl :'app/views/type/type1.html'
+                templateUrl :'app/views/type/firework.html'
             })
             .when('/type2',{
                 templateUrl :'app/views/type/type2.html'

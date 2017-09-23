@@ -50,20 +50,14 @@ module.exports = function (router) {
         });
     });
     //For getting message
-    router.get('/message',function (req,res) {
-       wish.findOne({counter:req.body.counter}).select('counter messages choice views').exec(function (err,wishing) {
+    router.post('/message',function (req,res) {
+       wish.findOne({counter:req.body.counter}).select('counter').exec(function (err,wishing) {
          if(err){
              res.json({success:false, message:err});
          }
          else {
-             if (req.body.counter === '' || req.body.counter === null) {
-                 res.json({success: false, message: "Counter Id was not provided"});
-             }
-             else {
-                     res.json({success: true, messages:wishing.messages, views:wishing.views, choice:wishing.choice });
-                  }
-             }
-
+             res.json({success: true, messages:wishing.messages, views:wishing.views, choice:wishing.choice });
+         }
        });
     });
 
